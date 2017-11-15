@@ -1,5 +1,21 @@
 # Cours de C++ -- Partie 2
 
+## Plan du cours
+
+Classes et propriétés (constructeurs, destructeurs, sémantique de copie et du move, séparation
+méthodes et définition), héritage et polymorphisme (fonctions virtuelles et virtuelles pures, bonnes
+pratiques), 
+
+## Ressources utiles
+
+[cppreference](http://en.cppreference.com/w/)
+[cplusplus](http://www.cplusplus.com/)
+
+Pour approfondir des concepts de C/C++ les [slides de deep
+c/c++](https://www.slideshare.net/olvemaudal/deep-c) peuvent être intéressants.
+
+Pour gdb [guide de survie](https://sen.enst.fr/se203/guide-de-survie-gdb)
+
 ## Rappels du précédent cours
 
 ### Afficher un message
@@ -38,4 +54,48 @@ void foo() {
     Hello *hello_3 = malloc(Hello); // Créé sur le heap, à libérer avec free, non initialisé.
 
 }
+```
+
+## Généricité
+
+```c++
+template <class T>
+T identity(T arg) {
+    return arg;
+}
+```
+
+```c++
+template <class T>
+class Pair {
+  public:
+    Pair(T a, T b) : a(a), b(b) {}
+    T a;
+    T b;
+};
+```
+
+Exemple utile de généricité
+
+```
+template <class T>
+class Mutex {
+  private:
+    T data;
+    std::mutex mut;
+  public:
+    Mutex(T data) : data(data), mut(new mutex) {}
+    ~Mutex() {
+        delete this.mut;
+    }
+
+    T lock() {
+        this.mut.lock();
+        return this.data;
+    }
+
+    void unlock() {
+        this.mut.unlock();
+    }
+};
 ```
