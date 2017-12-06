@@ -42,7 +42,7 @@ int main() {
     ll.push(2)->push(3)->push(4);
 }
 
-
+/*
 Mutex i = Mutex(0);
 
 void increment() {
@@ -52,3 +52,4 @@ void increment() {
         lock->set(i+1);
     }
 }
+*/
