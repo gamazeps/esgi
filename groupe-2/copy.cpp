@@ -1,7 +1,6 @@
-/*
- * In order to see the actual interface of a file in C++ you can read this reference page:
- * http://www.cplusplus.com/doc/tutorial/files/
- */
+#include <iostream>
+
+using namespace std;
 
 class File {
   public:
@@ -15,8 +14,11 @@ class File {
     }
 
     File& operator = (const File& r) {
-        this->fcontent = malloc(r.fsize);
-        *this->fcontent = r->fcontent;
+        this->fname = r.fname;
+        this->fsize = r.fsize;
+        
+        this->fcontent = malloc(fsize);
+        memcpy(r.fcontent, this->fcontent, this->fsize);
     }
 
   private:
@@ -25,7 +27,7 @@ class File {
     usize_t fsize;
 }
 
-{
+int main() {
     File file = File("~/.zshrc");
-    File copy = file;
+    File file_copy = file;
 }

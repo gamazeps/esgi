@@ -16,6 +16,11 @@ c/c++](https://www.slideshare.net/olvemaudal/deep-c) peuvent être intéressants
 
 Pour gdb [guide de survie](https://sen.enst.fr/se203/guide-de-survie-gdb)
 
+[c++ style guide](https://google.github.io/styleguide/cppguide.html)
+
+Liste de ressources générales ["Google guide to technical
+development"](https://github.com/ECB-Bikaner/google-guide-to-technical-development)
+
 ## Rappels du précédent cours
 
 ### Afficher un message
@@ -77,7 +82,7 @@ class Pair {
 
 Exemple utile de généricité
 
-```
+```c++
 template <class T>
 class Mutex {
   private:

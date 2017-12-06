@@ -12,7 +12,7 @@ class Toto {
 
 Toto tata;
 
-tata.foo(1).bar(2);
+tata.foo(1)->bar(2);
 
 
 std::cout << "coucou" << "tutu" << std::endl;
