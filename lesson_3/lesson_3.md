@@ -116,7 +116,7 @@ class LinkedList {
         delete this->start;
     }
 
-    LinkedList* push(char data) {
+    LinkedList* push(T data) {
         Node<T>* tmp = new Node(data, this->start);
         this->start = tmp;
         return this;
