@@ -5,29 +5,35 @@ using namespace std;
 template <class T>
 class SharedPointer {
   private:
-    int cnt;
+    int* cnt;
     T* ptr;
 
   public:
     SharedPointer(T* ptr) {
         this->ptr = ptr;
-        cnt = 1;
+        this->cnt = new int;
+        *(this->cnt) = 1;
     }
 
     ~SharedPointer() {
-        delete this->ptr;
-        this->ptr = NULL;
-        this->cnt = 0;
+        *(this->cnt)--;
+        cout << *(this->cnt) << endl;
+        if (this->cnt && *(this->cnt) == 0) {
+            delete this->ptr;
+            delete this->cnt;
+            this->ptr = NULL;
+        }
     }
 
     SharedPointer<T>& operator= (const SharedPointer<T>& other) {
         this->ptr = other.ptr;
         this->cnt = other.cnt;
-        this->cnt++;
+        *(this->cnt)++;
+        cout << "use_count: " << *(this->cnt) << endl;
         return *this;
     }
 
-    void exist() {
+    void exist() const {
         cout << "I exist" << endl;
     }
 };
@@ -51,6 +57,9 @@ int main() {
     SharedPointer<Dummy> p(dp); 
 
     SharedPointer<Dummy> p2 = p;
+    SharedPointer<Dummy> p3 = p;
+    SharedPointer<Dummy> p4 = p;
+    SharedPointer<Dummy> p5 = p;
     p2.exist();
 
     p.exist();
