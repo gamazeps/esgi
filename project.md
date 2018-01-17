@@ -42,7 +42,8 @@ serveur (machines virtuelles sur la même machine physique autorisées).
 
 - Le code doit être versioné sous git.
 - Le code doit être testé (coverage de 50% minimum).
-- Le code doit passer le test de memgrind.
+- Le code doit passer le test de memcheck
+  ([valgrind](http://valgrind.org/docs/manual/quick-start.html)).
 - Le code doit avoir une intégration continue (je recommande github pour héberger avec travis ou
   circleCI).
 - Le code doit être commenté.
