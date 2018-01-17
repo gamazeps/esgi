@@ -79,7 +79,7 @@ Pour l'interface du client `ncurses` pourra vous faciliter la tache.
 Ces fonctionalité feront augmenter votre note, cependant si le minimum n'est pas atteint, elles ne
 compteront pas.
 
-- Sauvegarder l'historique de conversation sur le serveur dans un fichier ou une pase de donnée (je
+- Sauvegarder l'historique de conversation sur le serveur dans un fichier ou une base de donnée (je
   conseille postgres).
 - Vérifier que deux clients n'ont pas le même identifiant.
 - Gérer les connexion de manière multithreadée.
