@@ -63,6 +63,9 @@ Dans le cadre de l'interface du client toutes les bibliothèques sont authorisé
 cependant de vous limiter à une interface en ligne de commande (Qt est un enfer que je ne souhaite à
 personne).
 
+Pour la partie réseau, [cpp-netlib](http://cpp-netlib.org/) ainsi que tout ce qui est dans la
+bibliotheque standard sont authorisés.
+
 ### Conseils
 
 Pour vous familiariser avec les notions de réseau je vous conseil de suivre le tutoriel de rabbit-mq
@@ -70,7 +73,8 @@ Pour vous familiariser avec les notions de réseau je vous conseil de suivre le 
 
 Vous pouvez utiliser netcat ou wget pour debugger la partie réseau.
 
-Le style guide c++ de google vous donnera de bons guide sur ce qu'est du code de 'qualité'.
+Le [style guide c++ de google](https://google.github.io/styleguide/cppguide.html) vous donnera de
+bons guide sur ce qu'est du code de 'qualité'.
 
 Pour l'interface du client `ncurses` pourra vous faciliter la tache.
 
