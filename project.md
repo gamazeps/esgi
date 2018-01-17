@@ -14,28 +14,28 @@ Les fonctionalité demandée pour valider sont:
   fixe).
 - Un client permettant d'envoyer et de recevoir des messages du serveur central.
 - Le client doit permettre d'écrire des messages tout en permettant de voir les messages envoyés par
-  d'autres utilisateurs.
+  d'autres clients.
 
 Les clients doivent tous se connecter avec la même commande, et ce quelque soit le nombre
-d'utilisateurs déjà connectés.
+d'clients déjà connectés.
 
 Quand un client se connecte ou se déconnecte, les autres clients doivent être prévenus.
 
 Quand un client perd sa connexion ou que le programme est interrompu, il doit être déconnecté du
 serveur (avec une minute de tolérance).
 
-La communication minimale est celle d'un canal de discussion commun auquel tous les utilisateurs ont
-accès. Chaque message envoyé par un utilisateur sur ce canal doit etre reçu par tous les
-utilisateurs connectés à ce canal.
+La communication minimale est celle d'un canal de discussion commun auquel tous les clients ont
+accès. Chaque message envoyé par un client sur ce canal doit etre reçu par tous les
+clients connectés à ce canal.
 
 Le serveur doit être capable d'accepter au minimum 20 connections en parallèle et envoyer les
-messages aux utilisateurs en moins d'une seconde.
+messages aux clients en moins d'une seconde.
 
-La contrainte d'ordonancement des messages est la suivante: si un utilisateur U envoie le message m1
-puis le message m2, les autres utilisateurs doivent les recevoir dans cet ordre. Cependant il n'y a
-pas de priorité entre les utilisateurs.
+La contrainte d'ordonancement des messages est la suivante: si un client U envoie le message m1
+puis le message m2, les autres clients doivent les recevoir dans cet ordre. Cependant il n'y a
+pas de priorité entre les clients.
 
-Vous devez pouvoir montrer que des utilisateurs sur différentes machines peuvent communiquer via ce
+Vous devez pouvoir montrer que des clients sur différentes machines peuvent communiquer via ce
 serveur (machines virtuelles sur la même machine physique autorisées).
 
 ### Qualité
@@ -81,12 +81,12 @@ compteront pas.
 
 - Sauvegarder l'historique de conversation sur le serveur dans un fichier ou une pase de donnée (je
   conseille postgres).
-- Vérifier que deux utilisateurs n'ont pas le même identifiant.
+- Vérifier que deux clients n'ont pas le même identifiant.
 - Gérer les connexion de manière multithreadée.
-- Permettre aux utilisateurs de demander l'historique (un moyen de passer des commandes depuis le
+- Permettre aux clients de demander l'historique (un moyen de passer des commandes depuis le
   client est traditionelement d'envoyer un message sous le format `/commande arguments`).
-- Permettre l'envoi de messages personels (visibles uniquement entre les deux utilisateurs
+- Permettre l'envoi de messages personels (visibles uniquement entre les deux clients
   concernés).
-- Permettre la création de canaux de discussions par les utilisateurs (channels sur irc/slacks).
+- Permettre la création de canaux de discussions par les clients (channels sur irc/slacks).
 
 Les évaluations et contraintes sont les mêmes que pour la partie précédente.
