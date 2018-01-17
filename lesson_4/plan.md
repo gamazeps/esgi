@@ -18,7 +18,14 @@ auto e = container.begin();
 ```
 
 ```c++
-for (const auto& e : l) {}
+vector<T> l;
+
+for (int i(0); i < l.size(); i++) {
+    cout << " " << l[i];
+}
+//...
+
+for (const auto& elem : container) {}
 ```
 
 # Project
@@ -32,3 +39,16 @@ Bonus points:
 - How much history I want
 - Authentification (each user has an id), what happens when two people connect with the same id ?
 - Anything irc does
+
+
+gamaz3ps@gmail.com
+
+
+
+
+
+
+
+
+
+
