@@ -79,6 +79,9 @@ bons guide sur ce qu'est du code de 'qualité'.
 
 Pour l'interface du client `ncurses` pourra vous faciliter la tache.
 
+Un bon tutoriel sur les sockets est celui de
+[tutorialpoints](https://www.tutorialspoint.com/unix_sockets).
+
 ## Fonctionalité supplémentaires
 
 Ces fonctionalité feront augmenter votre note, cependant si le minimum n'est pas atteint, elles ne
